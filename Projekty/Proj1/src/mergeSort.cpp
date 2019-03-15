@@ -1,16 +1,8 @@
 #include <iostream>
-#include "../headers/mergeSort.hh"
+#include <vector>
 
-using namespace std;
 
-void wypisz(int *arr, int r)
-{
-    for(int i =0; i <= r; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
+#include "mergeSort.hh"
 
 
 void mSort(int *arr, int l_index, int r_index)
@@ -31,6 +23,7 @@ void mSort(int *arr, int l_index, int r_index)
 
 void merge(int *arr, int l_index, int m_index, int r_index)
 {
+
     int assistantArr[r_index];
     int curr = l_index;
     int l_ptr = l_index;
