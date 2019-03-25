@@ -2,11 +2,11 @@
 
 #include "functions.hh"
 
-#define RANGE 10    // of randomized numbers (-1)
+#define RANGE 0    // of randomized numbers (-1) (range of int for 0)
 
-void wypisz(std::vector<int> &arr)
+void wypisz(std::vector<int> &arr, int l, int r)
 {
-    for(unsigned int i = 0; i < arr.size(); i++)
+    for(int i = l; i <= r; i++)
     {
         std::cout << arr[i] << " ";
     }
@@ -20,7 +20,13 @@ void FillArray(std::vector<int> &array, int n)
 
     for(int i=0; i<n; i++)
     {
+        #if RANGE
         array.push_back(rand()%RANGE);
+        #endif
+
+        #if !RANGE
+        array.push_back(rand());
+        #endif
     }
 }
 
