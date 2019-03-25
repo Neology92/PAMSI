@@ -14,8 +14,8 @@
  * @param l_index - Array start index.
  * @param r_index - Array end index.
  */
-void mSort(std::vector<int> &arr, int l_index, int r_index);
-void merge(std::vector<int> &arr, int l_index, int m_index, int r_index);
+void mSortAsc(std::vector<int> &arr, int l_index, int r_index);
+void mergeAsc(std::vector<int> &arr, int l_index, int m_index, int r_index);
 
 
 

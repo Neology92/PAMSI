@@ -2,7 +2,7 @@
 
 #include "functions.hh"
 
-// mergeSort.hh - contains announcements o Quick-sort functions
+// quickSort.hh - contains announcements o Quick-sort functions
 
 /**
  * @brief Sorts array Ascending

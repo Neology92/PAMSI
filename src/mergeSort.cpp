@@ -1,23 +1,23 @@
 #include "mergeSort.hh"
 
 
-void mSort(std::vector<int> &arr, int l_index, int r_index)
+void mSortAsc(std::vector<int> &arr, int l_index, int r_index)
 {
 
     if (l_index < r_index)
     {
         int m_index = (l_index + r_index)/2;
 
-        mSort(arr, l_index, m_index);          // Left Sort
-        mSort(arr, m_index+1, r_index);          // Right Sort
-        merge(arr, l_index, m_index, r_index);
+        mSortAsc(arr, l_index, m_index);          // Left Sort
+        mSortAsc(arr, m_index+1, r_index);          // Right Sort
+        mergeAsc(arr, l_index, m_index, r_index);
 
         // wypisz(arr, r_index);    // POMOCNICZE
 
     }
 }
 
-void merge(std::vector<int> &arr, int l_index, int m_index, int r_index)
+void mergeAsc(std::vector<int> &arr, int l_index, int m_index, int r_index)
 {
 
     std::vector<int> assistantArr;
