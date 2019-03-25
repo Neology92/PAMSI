@@ -16,7 +16,7 @@ void mSort(int *arr, int l_index, int r_index)
         mSort(arr, m_index+1, r_index);          // Right Sort
         merge(arr, l_index, m_index, r_index);
 
-        // wypisz(arr, r_index);    /////////////////////////////////POMOCNICZE
+        // wypisz(arr, r_index);    // POMOCNICZE
 
     }
 }
@@ -24,7 +24,7 @@ void mSort(int *arr, int l_index, int r_index)
 void merge(int *arr, int l_index, int m_index, int r_index)
 {
 
-    int assistantArr[r_index];
+    int *assistantArr = new int[r_index];
     int curr = l_index;
     int l_ptr = l_index;
     int r_ptr = m_index+1;
@@ -65,6 +65,8 @@ void merge(int *arr, int l_index, int m_index, int r_index)
         r_ptr++;
         curr++;
     }
+
+    delete [] assistantArr;
 }
 
 
@@ -79,14 +81,14 @@ void mSortDesc(int *arr, int l_index, int r_index)
         mSortDesc(arr, m_index+1, r_index);          // Right Sort
         mergeDesc(arr, l_index, m_index, r_index);
 
-        // wypisz(arr, r_index);    /////////////////////////////////POMOCNICZE
+        // wypisz(arr, r_index);    // OMOCNICZE
 
     }
 }
 
 void mergeDesc(int *arr, int l_index, int m_index, int r_index)
 {
-    int assistantArr[r_index];
+    int *assistantArr = new int[r_index];
     int curr = l_index;
     int l_ptr = l_index;
     int r_ptr = m_index+1;
@@ -127,4 +129,6 @@ void mergeDesc(int *arr, int l_index, int m_index, int r_index)
         r_ptr++;
         curr++;
     }
+
+    delete [] assistantArr;
 }
