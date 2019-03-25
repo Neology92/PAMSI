@@ -5,39 +5,101 @@
 #include "quickSort.hh"
 
 
-int partition(int arr[], int l_ind, int r_ind)
+
+void qSortAsc(std::vector<int> &arr, int l_ind, int r_ind)
+{
+    // [DEBUG]
+    // wypisz(arr, r_ind, l_ind);
+
+    int m_ind;
+        if(l_ind < r_ind)
+        {
+            m_ind = partitionAsc(arr, l_ind, r_ind);
+            qSortAsc(arr, l_ind, m_ind-1); // Na lewo od pivota
+            qSortAsc(arr, m_ind, r_ind);        // Na prawo od pivota
+        }
+
+    // [DEBUG]
+    // wypisz(arr, r_ind, l_ind);
+}
+
+
+int partitionAsc(std::vector<int> &arr, int l_ind, int r_ind)
 {
     srand(time(NULL));
-    int pivot = rand()%(r_ind-l_ind+1)+l_ind;
-        while(l_ind < r_ind)
+    int random = rand()%(r_ind-l_ind)+l_ind;
+    int pivot = arr[random];                    // choose pivot randomly
+
+        while(l_ind <= r_ind)
         {
-            if(arr[l_ind] < arr[pivot])         // jeśli wartosc po lewej mniejsza od powiota
+            while(arr[l_ind] < pivot)           // jeśli wartosc po lewej mniejsza od pivota
             {                                   // przesun wskaznik w prawo
                 l_ind++;
             }
-            else if(arr[r_ind] >= arr[pivot])   // jeśli wartosc na prawo - większa/równa pivot
+            
+            while(arr[r_ind] > pivot)           // jeśli wartosc na prawo - większa/równa pivot
             {                                   // przesuń wskażnik w lewo
                 r_ind--;
             }
-            else                                // jesli ustawiono na dwie wartości, które znajdują się po złych stronach
-            {                                   // zamień miejscami
+            
+            if(l_ind <= r_ind)                   // jesli ustawiono na dwie wartości, które znajdują się po złych stronach
+            {                                   // zamień miejscami, a nastęþnie popchnij wskaźniki dalej
                 int buff = arr[l_ind]; 
                 arr[l_ind] = arr[r_ind];
                 arr[r_ind] = buff;
+                l_ind++;
+                r_ind--;
             }    
         }
-    return pivot;
+    return l_ind;
 }
 
-void qSort(int arr[], int l_ind, int r_ind)
+
+
+void qSortDesc(std::vector<int> &arr, int l_ind, int r_ind)
 {
-    wypisz(arr, r_ind);                   //////POMOCNICZE
-    int pivot;
-        while(l_ind < r_ind)
+    // [DEBUG]
+    // wypisz(arr, r_ind, l_ind);
+
+    int m_ind;
+        if(l_ind < r_ind)
         {
-            pivot = partition(arr, l_ind, r_ind);
-            qSort(arr, l_ind, pivot-1 ); // Na lewo od pivota
-            qSort(arr, pivot+1, r_ind);        // Na prawo od pivota
+            m_ind = partitionDesc(arr, l_ind, r_ind);
+            qSortDesc(arr, l_ind, m_ind-1); // Na lewo od pivota
+            qSortDesc(arr, m_ind, r_ind);        // Na prawo od pivota
         }
-    wypisz(arr, r_ind);                   //////POMOCNICZE
+
+    // [DEBUG]
+    // wypisz(arr, r_ind, l_ind);
+}
+
+
+int partitionDesc(std::vector<int> &arr, int l_ind, int r_ind)
+{
+    srand(time(NULL));
+    int random = rand()%(r_ind-l_ind)+l_ind;
+    int pivot = arr[random];                    // choose pivot randomly
+
+        while(l_ind <= r_ind)
+        {
+            while(arr[l_ind] > pivot)           // jeśli wartosc po lewej mniejsza od pivota
+            {                                   // przesun wskaznik w prawo
+                l_ind++;
+            }
+            
+            while(arr[r_ind] < pivot)           // jeśli wartosc na prawo - większa/równa pivot
+            {                                   // przesuń wskażnik w lewo
+                r_ind--;
+            }
+            
+            if(l_ind <= r_ind)                   // jesli ustawiono na dwie wartości, które znajdują się po złych stronach
+            {                                   // zamień miejscami, a nastęþnie popchnij wskaźniki dalej
+                int buff = arr[l_ind]; 
+                arr[l_ind] = arr[r_ind];
+                arr[r_ind] = buff;
+                l_ind++;
+                r_ind--;
+            }    
+        }
+    return l_ind;
 }

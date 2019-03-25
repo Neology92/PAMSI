@@ -21,23 +21,22 @@ int main()
     std::vector<int> arr;
 
     FillArray(arr, n);
-    
-    //[DEBUG]
-    wypisz(arr);
+//[DEBUG]
+// wypisz(arr, 0, arr.size()-1);
 
 
-        mSortDesc(arr, 0, n-1);
-    
-    //[DEBUG]
-    wypisz(arr);
+        // mSortDesc(arr, 0, n-1);
+        qSortDesc(arr, 0, n-1);
         checkDesc(arr);
+// //[DEBUG]
+// wypisz(arr, 0, arr.size()-1);
 
-        mSort(arr, 0, n-1);
-    
-    //[DEBUG]
-    wypisz(arr);
 
-        // qSort(arr, 0, n-1);
+        // mSort(arr, 0, n-1);
+        qSortAsc(arr,0,n-1);
         checkAsc(arr);
+//[DEBUG]
+// wypisz(arr, 0, arr.size()-1);
+
         
 }
