@@ -1,8 +1,3 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <vector>
-
 #include "mergeSort.hh"
 #include "quickSort.hh"
  

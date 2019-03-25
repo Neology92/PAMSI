@@ -1,5 +1,9 @@
 #pragma once
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include <vector>
+
 
 // This file contains assistant functions
 

@@ -1,5 +1,3 @@
-#include<iostream>
-
 #include "functions.hh"
 
 #define RANGE 0    // of randomized numbers (-1) (range of int for 0)
