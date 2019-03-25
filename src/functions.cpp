@@ -63,3 +63,11 @@ void checkDesc(std::vector<int> &array)
     else        
         std::cout << "Posortowano pomyslnie malejąco!" << std::endl;
 }
+
+
+void swap(std::vector<int> &array, int index_1, int index_2)
+{
+    int buff = array[index_1]; 
+    array[index_1] = array[index_2];
+    array[index_2] = buff;
+}

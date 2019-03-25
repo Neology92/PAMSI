@@ -44,3 +44,12 @@ void checkAsc(std::vector<int> &array);
  * @param array - pointer to array to check
  */
 void checkDesc(std::vector<int> &array);
+
+/**
+ * @brief Swaps two elements in array (vector)
+ * 
+ * @param array - reference to array (vector<int>)
+ * @param index_1 - index to first element to swap
+ * @param index_2 - index to second element to swap
+ */
+void swap(std::vector<int> &array, int index_1, int index_2);

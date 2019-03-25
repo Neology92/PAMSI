@@ -40,9 +40,7 @@ int partitionAsc(std::vector<int> &arr, int l_ind, int r_ind)
             
             if(l_ind <= r_ind)                   // jesli ustawiono na dwie wartości, które znajdują się po złych stronach
             {                                   // zamień miejscami, a nastęþnie popchnij wskaźniki dalej
-                int buff = arr[l_ind]; 
-                arr[l_ind] = arr[r_ind];
-                arr[r_ind] = buff;
+                swap(arr, l_ind, r_ind);
                 l_ind++;
                 r_ind--;
             }    
