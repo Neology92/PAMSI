@@ -7,11 +7,13 @@
 /**
  * @brief 
  * [Funkcja pomocnicza]
- * Wypisuje tablicę
+ * Wypisuje tablicę od l elem do r elem
  * 
  * @param arr - tablica do wypisania
+ * @param l - left indicator
+ * @param r - right indicator
  */
-void wypisz(std::vector<int> &arr);
+void wypisz(std::vector<int> &arr, int l, int r);
 
 
 /**
