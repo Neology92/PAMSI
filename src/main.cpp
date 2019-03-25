@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 #include "mergeSort.hh"
 #include "quickSort.hh"
@@ -17,14 +18,26 @@ int main()
     cin >> n;
 
     // Alocate memory for N t
-    int *arr = new int[n];
-    
+    std::vector<int> arr;
+
     FillArray(arr, n);
+    
+    //[DEBUG]
+    wypisz(arr);
+
 
         mSortDesc(arr, 0, n-1);
+    
+    //[DEBUG]
+    wypisz(arr);
+        checkDesc(arr);
+
         mSort(arr, 0, n-1);
+    
+    //[DEBUG]
+    wypisz(arr);
+
         // qSort(arr, 0, n-1);
-        check(arr, n);
+        checkAsc(arr);
         
-    delete [] arr;
 }

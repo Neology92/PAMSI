@@ -1,11 +1,9 @@
 #include <iostream>
-#include <vector>
-
 
 #include "mergeSort.hh"
 
 
-void mSort(int *arr, int l_index, int r_index)
+void mSort(std::vector<int> &arr, int l_index, int r_index)
 {
 
     if (l_index < r_index)
@@ -21,21 +19,21 @@ void mSort(int *arr, int l_index, int r_index)
     }
 }
 
-void merge(int *arr, int l_index, int m_index, int r_index)
+void merge(std::vector<int> &arr, int l_index, int m_index, int r_index)
 {
 
-    int *assistantArr = new int[r_index];
+    std::vector<int> assistantArr;
     int curr = l_index;
-    int l_ptr = l_index;
-    int r_ptr = m_index+1;
+    int l_ptr = 0;
+    int r_ptr = m_index-l_index + 1;
 
     // Rewrite array to assistant array
     for(int i = l_index; i <= r_index; i++)
     {
-        assistantArr[i] = arr[i];
+        assistantArr.push_back(arr[i]);
     }
 
-    while(l_ptr <= m_index && r_ptr <= r_index)
+    while(l_ptr <= m_index-l_index && r_ptr <= r_index-l_index)
     {
         if(assistantArr[l_ptr] < assistantArr[r_ptr])
         {
@@ -47,30 +45,27 @@ void merge(int *arr, int l_index, int m_index, int r_index)
             arr[curr] = assistantArr[r_ptr];
             r_ptr++;
         }
-
         
         curr++;
     }
 
     
-    while(l_ptr <= m_index)
+    while(l_ptr <= m_index-l_index)
     {
         arr[curr] = assistantArr[l_ptr];
         l_ptr++;
         curr++;
     }
-    while(r_ptr <= r_index)
+    while(r_ptr <= r_index-l_index)
     {
         arr[curr] = assistantArr[r_ptr];
         r_ptr++;
         curr++;
     }
-
-    delete [] assistantArr;
 }
 
 
-void mSortDesc(int *arr, int l_index, int r_index)
+void mSortDesc(std::vector<int> &arr, int l_index, int r_index)
 {
 
     if (l_index < r_index)
@@ -86,20 +81,20 @@ void mSortDesc(int *arr, int l_index, int r_index)
     }
 }
 
-void mergeDesc(int *arr, int l_index, int m_index, int r_index)
+void mergeDesc(std::vector<int> &arr, int l_index, int m_index, int r_index)
 {
-    int *assistantArr = new int[r_index];
+    std::vector<int> assistantArr;
     int curr = l_index;
-    int l_ptr = l_index;
-    int r_ptr = m_index+1;
+    int l_ptr = 0;
+    int r_ptr = m_index-l_index + 1;
 
     // Rewrite array to assistant array
     for(int i = l_index; i <= r_index; i++)
     {
-        assistantArr[i] = arr[i];
+        assistantArr.push_back(arr[i]);
     }
 
-    while(l_ptr <= m_index && r_ptr <= r_index)
+    while(l_ptr <= m_index-l_index && r_ptr <= r_index-l_index)
     {
         if(assistantArr[l_ptr] > assistantArr[r_ptr])
         {
@@ -111,24 +106,21 @@ void mergeDesc(int *arr, int l_index, int m_index, int r_index)
             arr[curr] = assistantArr[r_ptr];
             r_ptr++;
         }
-
         
         curr++;
     }
 
     
-    while(l_ptr <= m_index)
+    while(l_ptr <= m_index-l_index)
     {
         arr[curr] = assistantArr[l_ptr];
         l_ptr++;
         curr++;
     }
-    while(r_ptr <= r_index)
+    while(r_ptr <= r_index-l_index)
     {
         arr[curr] = assistantArr[r_ptr];
         r_ptr++;
         curr++;
     }
-
-    delete [] assistantArr;
 }
