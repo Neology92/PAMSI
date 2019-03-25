@@ -1,30 +1,33 @@
 #include<iostream>
 
+#include "functions.hh"
 
-void wypisz(int *arr, int r)
+#define RANGE 10    // of randomized numbers (-1)
+
+void wypisz(std::vector<int> &arr)
 {
-    for(int i =0; i <= r; i++)
+    for(unsigned int i = 0; i < arr.size(); i++)
     {
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
 }
 
-void FillArray(int *array, int n)
+void FillArray(std::vector<int> &array, int n)
 {
     // Randomizin'
     srand(time(NULL));
 
     for(int i=0; i<n; i++)
     {
-        array[i]= rand()%10;
+        array.push_back(rand()%RANGE);
     }
 }
 
-void check(int *array, int n)
+void checkAsc(std::vector<int> &array)
 {
     bool Err = 0;
-    for (int i=1; i < n; i++)
+    for (unsigned int i=1; i < array.size(); i++)
     {
         if(array[i-1] > array[i])
         {
@@ -36,5 +39,23 @@ void check(int *array, int n)
     if(Err)
         std::cout << "Err: Blad sortowania!" << std::endl;
     else        
-        std::cout << "Posortowano pomyslnie!" << std::endl;
+        std::cout << "Posortowano pomyslnie rosnąco!" << std::endl;
+}
+
+void checkDesc(std::vector<int> &array)
+{
+    bool Err = 0;
+    for (unsigned int i=1; i < array.size(); i++)
+    {
+        if(array[i-1] < array[i])
+        {
+            Err = 1;
+            break;
+        }
+    }
+
+    if(Err)
+        std::cout << "Err: Blad sortowania!" << std::endl;
+    else        
+        std::cout << "Posortowano pomyslnie malejąco!" << std::endl;
 }
