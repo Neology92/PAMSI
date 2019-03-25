@@ -10,7 +10,7 @@
  * Slices array to smaller problems.
  * Calls merge() for segregated (treats 1-element array as sorted).
  * 
- * @param arr - pointer to array to sort.
+ * @param arr - reference to vector (array) to sort.
  * @param l_index - Array start index.
  * @param r_index - Array end index.
  */
@@ -24,7 +24,7 @@ void merge(std::vector<int> &arr, int l_index, int m_index, int r_index);
  * Slices array to smaller problems.
  * Calls merge() for segregated (treats 1-element array as sorted).
  * 
- * @param arr - pointer to array to sort.
+ * @param arr - reference to vector (array) to sort.
  * @param l_index - Array start index.
  * @param r_index - Array end index.
  */
