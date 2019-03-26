@@ -26,6 +26,8 @@ int partitionAsc(std::vector<int> &arr, int l_ind, int r_ind)
     int random = rand()%(r_ind-l_ind)+l_ind;
     int pivot = arr[random];                    // choose pivot randomly
 
+    // int pivot = (arr[l_ind] + arr[(r_ind-l_ind)/2+l_ind] + arr[r_ind])/3;
+
         while(l_ind <= r_ind)
         {
             while(arr[l_ind] < pivot)           // jeśli wartosc po lewej mniejsza od pivota

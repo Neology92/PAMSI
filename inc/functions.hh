@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include <cstdlib>
+#include <cstdio>
 #include <ctime>
+#include <cmath>
 #include <vector>
 
 

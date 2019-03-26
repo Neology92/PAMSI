@@ -1,0 +1,19 @@
+MergeSort:		QuickSort		IntroSort
+
+10tys,0%-sorted at begin:
+
+0.0110434		0.00903723		0.00465344
+50tys,0%-sorted at begin:
+
+0.056559		0.045754		0.0237727
+100tys,0%-sorted at begin:
+
+0.115741		0.0924723		0.0486174
+500tys,0%-sorted at begin:
+
+0.57855		0.472665		0.254027
+1000tys,0%-sorted at begin:
+
+1.18381		0.955272		0.517692
+
+10tys,25%-sorted at begin:

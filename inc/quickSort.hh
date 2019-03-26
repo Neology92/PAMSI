@@ -29,8 +29,8 @@ int partitionAsc(std::vector<int> &arr, int l_ind, int r_ind);
  * @brief Sorts array Descending
  * 
  * @param arr  - reference to array (vector<int>) to sort
- * @param l_ind - left indicator
- * @param r_ind - right indicator
+ * @param l_ind - left index
+ * @param r_ind - right index
  */
 void qSortDesc(std::vector<int> &arr, int l_ind, int r_ind);
 

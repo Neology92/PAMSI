@@ -1,8 +1,13 @@
 #include "heapSort.hh"
 
 
-void hSortAsc(std::vector<int> &arr)
+void hSortAsc(std::vector<int> &input_arr, int begin, int last)
 {
+    std::vector<int> arr;
+
+    for(int i = begin; i <= last; i++){
+        arr.push_back(input_arr[i]);
+    }
     int n = arr.size();
 
     for(int i = n/2-1; i >= 0; i--){
@@ -13,6 +18,10 @@ void hSortAsc(std::vector<int> &arr)
     {
         swap(arr, 0, i);
         makeMaxHeapAsc(arr, --n, 0);
+    }
+
+    for(int i = begin; i <= last; i++){
+        input_arr[i] = arr[i-begin];
     }
 
 }
@@ -39,8 +48,14 @@ void makeMaxHeapAsc(std::vector<int> &arr, int size, int parent_index)
 }
 
 
-void hSortDesc(std::vector<int> &arr)
+void hSortDesc(std::vector<int> &input_arr, int begin, int last)
 {
+    std::vector<int> arr;
+
+    for(int i = begin; i <= last; i++){
+        arr.push_back(input_arr[i]);
+    }
+
     int n = arr.size();
 
     for(int i = n/2-1; i >= 0; i--){
@@ -53,6 +68,9 @@ void hSortDesc(std::vector<int> &arr)
         makeMaxHeapDesc(arr, --n, 0);
     }
 
+    for(int i = begin; i <= last; i++){
+        input_arr[i] = arr[i-begin];
+    }
 }
 
 
