@@ -12,75 +12,77 @@ int main()
 {
     std::cout << "MergeSort:\t\tQuickSort\t\tIntroSort" << std::endl << std::endl;
 
-    test(10000, 0.0);
-    test(50000, 0.0);
-    test(100000, 0.0);
-    test(500000, 0.0);
     test(1000000, 0.0);
-    std::cout << std::endl;
 
-    test(10000, 0.25);
-    test(50000, 0.25);
-    test(100000, 0.25);
-    test(500000, 0.25);
-    test(1000000, 0.25);
-    std::cout << std::endl;
+    // test(10000, 0.0);
+    // test(50000, 0.0);
+    // test(100000, 0.0);
+    // test(500000, 0.0);
+    // test(1000000, 0.0);
+    // std::cout << std::endl;
 
-    test(10000, 0.50);
-    test(50000, 0.50);
-    test(100000, 0.50);
-    test(500000, 0.50);
-    test(1000000, 0.50);
-    std::cout << std::endl;
+    // test(10000, 0.25);
+    // test(50000, 0.25);
+    // test(100000, 0.25);
+    // test(500000, 0.25);
+    // test(1000000, 0.25);
+    // std::cout << std::endl;
 
-    test(10000, 0.75);
-    test(50000, 0.75);
-    test(100000, 0.75);
-    test(500000, 0.75);
-    test(1000000, 0.75);
-    std::cout << std::endl;
+    // test(10000, 0.50);
+    // test(50000, 0.50);
+    // test(100000, 0.50);
+    // test(500000, 0.50);
+    // test(1000000, 0.50);
+    // std::cout << std::endl;
 
-    test(10000, 0.95);
-    test(50000, 0.95);
-    test(100000, 0.95);
-    test(500000, 0.95);
-    test(1000000, 0.95);
-    std::cout << std::endl;
+    // test(10000, 0.75);
+    // test(50000, 0.75);
+    // test(100000, 0.75);
+    // test(500000, 0.75);
+    // test(1000000, 0.75);
+    // std::cout << std::endl;
 
-    test(10000, 0.99);
-    test(50000, 0.99);
-    test(100000, 0.99);
-    test(500000, 0.99);
-    test(1000000, 0.99);
-    std::cout << std::endl;
+    // test(10000, 0.95);
+    // test(50000, 0.95);
+    // test(100000, 0.95);
+    // test(500000, 0.95);
+    // test(1000000, 0.95);
+    // std::cout << std::endl;
 
-    test(10000, 0.997);
-    test(50000, 0.997);
-    test(100000, 0.997);
-    test(500000, 0.997);
-    test(1000000, 0.997);
-    std::cout << std::endl;
+    // test(10000, 0.99);
+    // test(50000, 0.99);
+    // test(100000, 0.99);
+    // test(500000, 0.99);
+    // test(1000000, 0.99);
+    // std::cout << std::endl;
 
-    testReverse(10000);
-    testReverse(50000);
-    testReverse(100000);
-    testReverse(500000);
-    testReverse(1000000);
-    std::cout << std::endl;
+    // test(10000, 0.997);
+    // test(50000, 0.997);
+    // test(100000, 0.997);
+    // test(500000, 0.997);
+    // test(1000000, 0.997);
+    // std::cout << std::endl;
+
+    // testReverse(10000);
+    // testReverse(50000);
+    // testReverse(100000);
+    // testReverse(500000);
+    // testReverse(1000000);
+    // std::cout << std::endl;
 
 }
 
 
 void test(int n, float mnoznik)
 {
-    std::cout << n/1000 <<"tys," << mnoznik << "%-sorted at begin:" << std::endl;
+    std::cout << n/1000 <<"tys," << mnoznik*100 << "%-sorted at begin:" << std::endl;
 
 
     float A_time_mSort(0);
     float A_time_qSort(0);
     float A_time_iSort(0);
 
-    for(int i = 100; i>0; i--)
+    // for(int i = 100; i>0; i--)
     {
         clock_t t;
         float time_mSort(0);
@@ -129,7 +131,8 @@ void test(int n, float mnoznik)
         A_time_iSort += time_iSort;
     }
     
-    std::cout << std::endl << A_time_mSort/100.0 << "\t\t" << A_time_qSort/100.0 << "\t\t" << A_time_iSort/100.0 << std::endl;
+    std::cout << A_time_mSort << "\t\t" << A_time_qSort << "\t\t" << A_time_iSort << std::endl << std::endl;
+    // std::cout << A_time_mSort/100.0 << "\t\t" << A_time_qSort/100.0 << "\t\t" << A_time_iSort/100.0 << std::endl << std::endl;
 }
 
 
