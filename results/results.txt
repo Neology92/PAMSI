@@ -1,0 +1,130 @@
+MergeSort:		QuickSort		IntroSort
+
+10tys,0%-sorted at begin:
+0.0111352		0.00912005		0.00468134
+
+50tys,0%-sorted at begin:
+0.0567264		0.0460744		0.0241563
+
+100tys,0%-sorted at begin:
+0.116051		0.0930057		0.0491619
+
+500tys,0%-sorted at begin:
+0.579155		0.475628		0.256317
+
+1000tys,0%-sorted at begin:
+1.18677		0.961175		0.522544
+
+
+10tys,25%-sorted at begin:
+0.0107923		0.0089585		0.00455555
+
+50tys,25%-sorted at begin:
+0.0553835		0.0458309		0.0238508
+
+100tys,25%-sorted at begin:
+0.112966		0.0923947		0.0486487
+
+500tys,25%-sorted at begin:
+0.564649		0.472966		0.253622
+
+1000tys,25%-sorted at begin:
+1.15682		0.955014		0.516537
+
+
+10tys,50%-sorted at begin:
+0.0108988		0.00916408		0.00464228
+
+50tys,50%-sorted at begin:
+0.0543745		0.0457973		0.0236974
+
+100tys,50%-sorted at begin:
+0.110164		0.0914623		0.0477142
+
+500tys,50%-sorted at begin:
+0.559512		0.476884		0.252564
+
+1000tys,50%-sorted at begin:
+1.12486		0.944426		0.505616
+
+
+10tys,75%-sorted at begin:
+0.0103122		0.00874468		0.00432144
+
+50tys,75%-sorted at begin:
+0.0524703		0.0444162		0.0224295
+
+100tys,75%-sorted at begin:
+0.106938		0.0892766		0.0456487
+
+500tys,75%-sorted at begin:
+0.531775		0.456081		0.236859
+
+1000tys,75%-sorted at begin:
+1.08973		0.922272		0.48189
+
+
+10tys,95%-sorted at begin:
+0.0101155		0.00851192		0.00408423
+
+50tys,95%-sorted at begin:
+0.0514085		0.0427169		0.0206703
+
+100tys,95%-sorted at begin:
+0.104547		0.0861014		0.0422928
+
+500tys,95%-sorted at begin:
+0.521116		0.439371		0.218015
+
+1000tys,95%-sorted at begin:
+1.06505		0.884556		0.440974
+
+
+10tys,99%-sorted at begin:
+0.0100506		0.00836512		0.0039759
+
+50tys,99%-sorted at begin:
+0.0511474		0.0421011		0.0197346
+
+100tys,99%-sorted at begin:
+0.104132		0.0843811		0.0405154
+
+500tys,99%-sorted at begin:
+0.518949		0.428696		0.206989
+
+1000tys,99%-sorted at begin:
+1.05515		0.859335		0.417573
+
+
+10tys,99.7%-sorted at begin:
+0.0100775		0.00838017		0.00392711
+
+50tys,99.7%-sorted at begin:
+0.0522044		0.0426252		0.0202915
+
+100tys,99.7%-sorted at begin:
+0.105262		0.0848593		0.0406923
+
+500tys,99.7%-sorted at begin:
+0.52002		0.427958		0.206774
+
+1000tys,99.7%-sorted at begin:
+1.06427		0.859044		0.41697
+
+
+10tys,reverse-sorted at begin:
+0.0101421		0.00826032		0.00363632
+
+50tys,reverse-sorted at begin:
+0.0517891		0.0415334		0.0194685
+
+100tys,reverse-sorted at begin:
+0.105072		0.0833082		0.0390142
+
+500tys,reverse-sorted at begin:
+0.523899		0.420443		0.199008
+
+1000tys,reverse-sorted at begin:
+1.06564		0.841961		0.397844
+
+
