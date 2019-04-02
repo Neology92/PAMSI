@@ -131,8 +131,8 @@ void test(int n, float mnoznik)
         A_time_iSort += time_iSort;
     }
     
-    std::cout << A_time_mSort << "\t\t" << A_time_qSort << "\t\t" << A_time_iSort << std::endl << std::endl;
-    // std::cout << A_time_mSort/100.0 << "\t\t" << A_time_qSort/100.0 << "\t\t" << A_time_iSort/100.0 << std::endl << std::endl;
+    // std::cout << A_time_mSort << "\t\t" << A_time_qSort << "\t\t" << A_time_iSort << std::endl << std::endl;
+    std::cout << A_time_mSort/100.0 << "\t\t" << A_time_qSort/100.0 << "\t\t" << A_time_iSort/100.0 << std::endl << std::endl;
 }
 
 
